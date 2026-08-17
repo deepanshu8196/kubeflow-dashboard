@@ -3,5 +3,5 @@ kind: Kustomization
 
 resources:
   # 1. Fetch remote Profile CRD upstream
-  - https://raw.githubusercontent.com/kubeflow/manifests/v1.10.0/apps/profiles/upstream/base/crd.yaml
+  - github.com/kubeflow/manifests/apps/profiles/upstream/base?ref=v1.10.0
   - helmrelease.yaml
