@@ -10,12 +10,13 @@ spec:
     substitute:
       releaseName: ${releaseName}
       releaseNamespace: ${releaseNamespace}
+      appVersion: ${appVersion}
   prune: true
   retryInterval: 1m0s
   sourceRef:
-    kind: OCIRepository
-    name: ${releaseName}-source
-    namespace: ${releaseNamespace}
+    kind: GitRepository
+    name: kubeflow-dashboard-apps
+    namespace: flux-system
   timeout: 10m0s
   wait: true
 ---
